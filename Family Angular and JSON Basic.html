@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <title>Family Basic Plan</title>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background: url('img.jpg') no-repeat;
+                background-size: cover;
+            }
+            h1 {
+                font-size: 3rem;
+                color: white;
+            }
+            .family-info {
+                text-emphasis: none;
+                text-align: justify;
+                border: 4px double yellowgreen;
+                margin: 0px 90px 20px 90px;
+                padding: 40px;
+                border-radius: 5em;
+                display: flex;
+            }
+            .myself {
+                display: inline-flex;
+                color: white;
+                font-size: 20px;
+            }
+            .myself input {
+                width: 130px;
+                height: 30px;
+                margin-left: 20px;
+                color: yellowgreen;
+                background-color: teal;
+            }
+            .myself-name {
+                margin: 20px;
+            }
+            .myself-dob {
+                margin: 20px;
+            }
+            .myself-member {
+                margin: 20px;
+            }
+            .myself-submit input {
+                color: thistle;
+                background-color: indigo;
+                padding: 20px;
+                margin-left: 20px;
+                font-size: 20px;
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                border-radius: 50%;
+            }
+            .myself-submit input:hover {
+                background-color: thistle;
+                color: indigo
+            }
+            .family-start {
+                text-emphasis: none;
+                text-align: justify;
+                border: 4px double yellowgreen;
+                margin: 0px 90px 20px 90px;
+                padding: 40px;
+                border-radius: 5em;
+                display: flex;
+            }
+            .family-fill {
+                display: inline-flex;
+                color: white;
+                font-size: 20px;
+            }
+            .family-fill input {
+                width: 130px;
+                height: 30px;
+                margin-left: 20px;
+                color: yellowgreen;
+                background-color: teal;
+            }
+            .family-fill select {
+                width: 130px;
+                height: 30px;
+                margin-left: 20px;
+                margin-top: 5px;
+                color: yellowgreen;
+                background-color: teal;
+            }
+            .family-name {
+                margin: 20px;
+            }
+            .family-dob {
+                margin: 20px;
+            }
+            .family-relation {
+                margin: 20px;
+            }
+            .add-remove {
+                display: flex;
+            }
+            .add-remove input {
+                color: thistle;
+                background-color: indigo;
+                padding: 20px;
+                margin-left: 20px;
+                font-size: 20px;
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                border-radius: 50%;
+                display: flex;
+                width: 20px;
+                text-align: left;
+            }
+            .add-remove input:hover {
+                background-color: thistle;
+                color: indigo
+            }
+        </style>
+        <script>
+            document.getElementById("mybtn").addEventListener("click",function(){
+                var mybox=document.getElementById("start")
+                if(mybox.style.display=="none"){
+                    mybox.style.display="block";
+                }
+                else{
+                    mybox.style.display="none";
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <center><u style="color: violet;"><h1>Family Members</h1></u></center>
+        <br><br>
+        <form>
+            <div class="family-info">
+                <div class="myself">
+                    <div class="myself-name">
+                    My Name:<input type="text"></div>
+                    <div class="myself-dob">
+                    My DOB:<input type="date"></div>
+                    <div class="myself-member">
+                    Members:<input type="number"></div>
+                </div>
+                <div class="myself-submit">
+                    <input type="button" id="mybtn" value="Fill Info"></button>
+                </div>
+            </div>
+            <div class="family-start" id="start">
+                <div class="family-fill">
+                    <div class="family-name">
+                        Name:<input type="text">
+                    </div>
+                    <div class="family-dob">
+                        DOB:<input type="date">
+                    </div>
+                    <div class="family-relation">
+                        Relation:<select class="family-relation">
+                            <option value="select" style="color: lightblue;">--Select--</option>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="son">Son</option>
+                            <option value="daughter">Daughter</option>
+                            <option value="grandma">GrandMa</option>
+                            <option value="grandpa">GrandPa</option>
+                            <option value="nephew">Nephew</option>
+                            <option value="niece">Niece</option>
+                            <option value="uncle">Uncle</option>
+                            <option value="aunt">Aunt</option>
+                        </select>
+                    </div>
+                    <div class="add-remove">
+                        <input type="button" value="+"></button>
+                        <input type="button" value="X"></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
